@@ -1,0 +1,115 @@
+version: "3.9"
+services:
+  api:
+    build: ./
+    container_name: tickets_alert_api
+    restart: "no"
+    env_file:
+      - .env
+    volumes:
+      - ./:/$PWD
+    links:
+      - "db"
+      - "redis"
+      - "rabbit"
+    environment:
+      APP_NAME: tickets_alert
+    ports:
+      - "4000:4000"
+    working_dir: $PWD
+    depends_on:
+      - db
+      - redis
+      - rabbit
+      - elasticsearch
+      - filebeat
+      - kibana
+
+  db:
+    container_name: tickets_alert_postgres
+    image: postgres:14
+    restart: "no"
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: tickets_alert
+      POSTGRES_PASSWORD: tickets_alert
+      POSTGRES_DB: tickets_alert
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  redis:
+    container_name: tickets_alert_redis
+    image: redis:alpine3.15
+    restart: "no"
+    ports:
+      - "56380:6379"
+    volumes:
+      - redis_data:/data
+
+  rabbit:
+    container_name: tickets_alert_rabbit
+    image: rabbitmq:management
+    restart: "no"
+    ports:
+      - "45673:15672"
+    environment:
+      RABBITMQ_DEFAULT_VHOST: tickets_alert
+      RABBITMQ_DEFAULT_USER: tickets_alert
+      RABBITMQ_DEFAULT_PASS: tickets_alert
+
+  elasticsearch:
+    container_name: tickets_alert_elasticsearch
+    image: elasticsearch:8.6.1
+    restart: "no"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'
+          memory: 1G
+    ports:
+      - "9200:9200"
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+
+  filebeat:
+    container_name: tickets_alert_filebeat
+    image: docker.elastic.co/beats/filebeat:8.6.1
+    restart: "no"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'
+          memory: 1G
+    user: root
+    command: filebeat -e -strict.perms=false
+    volumes:
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    container_name: tickets_alert_kibana
+    image: kibana:8.6.1
+    restart: "no"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'
+          memory: 1G
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+      - filebeat
+volumes:
+  db_data:
+  redis_data:
+  elasticsearch_data:

@@ -1,0 +1,38 @@
+on: push
+
+jobs:
+  full:
+    runs-on: ubuntu-22.04
+    name: OTP ${{matrix.otp}} / Elixir ${{matrix.elixir}} / Rebar ${{matrix.rebar3}}
+    strategy:
+      matrix:
+        otp: ['25' ]
+        elixir: [ '1.14.2' ]
+        rebar3: ['3.20']
+    steps:
+      - uses: actions/checkout@v2
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: ${{matrix.otp}}
+          elixir-version: ${{matrix.elixir}}
+          rebar3-version: ${{matrix.rebar3}}
+      - run: rebar3 ct
+      - run: mix deps.get
+      - run: mix check.compile
+      - run: mix check.format
+      - run: mix check.deps.unlock
+      - run: mix check.credo
+      - run: mix check.dialyzer
+      - run: mix test
+
+    services:
+      db:
+        image: postgres:11
+        ports: ['5432:5432']
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
