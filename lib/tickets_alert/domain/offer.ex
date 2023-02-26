@@ -1,6 +1,8 @@
 defmodule TicketsAlert.Domain.Offer do
   @moduledoc false
 
+  require Logger
+
   alias TicketsAlert.Schema.Offer, as: OfferSchema
 
   defstruct [
@@ -32,5 +34,8 @@ defmodule TicketsAlert.Domain.Offer do
     }
   end
 
-  def new(_), do: nil
+  def new(data) do
+    Logger.error("Offer new error ", reason: inspect(data))
+    nil
+  end
 end

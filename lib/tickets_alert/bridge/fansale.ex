@@ -6,6 +6,8 @@ defmodule TicketsAlert.Bridge.Fansale do
   alias TicketsAlert.Domain.FansaleOffer, as: FansaleOfferDomain
   alias Noether.Either
 
+  require Logger
+
   @spec get_offers(String.t()) :: {:ok, [FansaleOfferDomain.t()]} | {:error, any()}
   def get_offers(group_event_id) do
     url = build_url("#{base_url()}/fansale/json/offer", groupEventId: group_event_id)
@@ -29,8 +31,13 @@ defmodule TicketsAlert.Bridge.Fansale do
     url
     |> HTTPoison.get(headers, timeout: 30_000, recv_timeout: 30_000)
     |> case do
-      {:ok, %{status_code: 200, body: body}} -> body
-      _ -> ":error"
+      {:ok, %{status_code: 200, body: body}} ->
+        Logger.info("Fansale api call success for group event id: #{group_event_id}", reason: inspect(body))
+        body
+
+      error ->
+        Logger.error("Fansale api call error for group event id: #{group_event_id}", reason: inspect(error))
+        ":error"
     end
     |> Jason.decode(keys: :atoms)
     |> case do
@@ -41,7 +48,8 @@ defmodule TicketsAlert.Bridge.Fansale do
         |> Enum.reject(&is_nil(&1))
         |> Either.wrap()
 
-      _ ->
+      error ->
+        Logger.error("Fansale api decode error for group event id: #{group_event_id}", reason: inspect(error))
         {:error, nil}
     end
   end

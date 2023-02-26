@@ -1,6 +1,8 @@
 defmodule TicketsAlert.Application.FansaleEvent do
   @moduledoc false
 
+  require Logger
+
   alias TicketsAlert.Domain.Event, as: EventDomain
   alias TicketsAlert.Application.Event, as: EventApplication
   alias TicketsAlert.Application.Offer, as: OfferApplication
@@ -19,7 +21,7 @@ defmodule TicketsAlert.Application.FansaleEvent do
          new_stored_offers <- save_offers(new_fansale_offers, event_id) do
       send_telegram_messages(new_stored_offers, event_title)
     else
-      error -> handle_error(error)
+      error -> handle_error(error, event_identifier)
     end
   end
 
@@ -62,19 +64,19 @@ defmodule TicketsAlert.Application.FansaleEvent do
     }
   end
 
-  @spec handle_error(boolean() | tuple()) :: atom()
-  defp handle_error(false) do
-    IO.puts("event not valid")
+  @spec handle_error(boolean() | tuple(), String.t()) :: atom()
+  defp handle_error(false, event_identifier) do
+    Logger.error("event not valid #{event_identifier}")
     :error
   end
 
-  defp handle_error({:error, :not_found}) do
-    IO.puts("event not found")
+  defp handle_error({:error, :not_found}, event_identifier) do
+    Logger.error("event not found #{event_identifier}")
     :error
   end
 
-  defp handle_error({:error, _}) do
-    IO.puts("generic error")
+  defp handle_error({:error, error}, _event_identifier) do
+    Logger.error("generic error", reason: inspect(error))
     :error
   end
 

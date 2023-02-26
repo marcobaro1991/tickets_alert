@@ -18,22 +18,6 @@ defmodule TicketsAlert.Support.FansaleMock do
 
   defp handle_response(
          %{
-           "groupEventId" => "success_group_event_id",
-           "maxResults" => _max_results,
-           "dataMode" => _data_mode
-         },
-         conn
-       ) do
-    (@base <> "/response_success.json")
-    |> File.read()
-    |> case do
-      {:ok, content} -> send_resp(conn, 200, content)
-      {:error, :enoent} -> nil
-    end
-  end
-
-  defp handle_response(
-         %{
            "groupEventId" => "error_group_event_id",
            "maxResults" => _max_results,
            "dataMode" => _data_mode
@@ -44,6 +28,11 @@ defmodule TicketsAlert.Support.FansaleMock do
   end
 
   defp handle_response(_, conn) do
-    send_resp(conn, 500, "")
+    (@base <> "/response_success.json")
+    |> File.read()
+    |> case do
+      {:ok, content} -> send_resp(conn, 200, content)
+      {:error, :enoent} -> nil
+    end
   end
 end

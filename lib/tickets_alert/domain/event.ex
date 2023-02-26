@@ -1,6 +1,8 @@
 defmodule TicketsAlert.Domain.Event do
   @moduledoc false
 
+  require Logger
+
   alias TicketsAlert.Schema.Event, as: EventSchema
   alias TicketsAlert.Domain.Offer, as: OfferDomain
 
@@ -50,5 +52,8 @@ defmodule TicketsAlert.Domain.Event do
         offers: Enum.map(offers, &OfferDomain.new(&1))
       }
 
-  def new(_), do: nil
+  def new(data) do
+    Logger.error("Event new error ", reason: inspect(data))
+    nil
+  end
 end

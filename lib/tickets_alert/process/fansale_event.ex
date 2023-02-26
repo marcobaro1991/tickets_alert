@@ -7,6 +7,8 @@ defmodule TicketsAlert.Process.FansaleEvent do
 
   alias TicketsAlert.Application.FansaleEvent, as: FansaleEventApplication
 
+  require Logger
+
   @run_every_in_minutes 1
 
   def start_link(event = %{identifier: event_identifier}) do
@@ -22,6 +24,8 @@ defmodule TicketsAlert.Process.FansaleEvent do
 
   @impl true
   def handle_info(:work, state = %{identifier: event_identifier}) do
+    Logger.info("check fansale event: #{event_identifier}")
+
     FansaleEventApplication.check(event_identifier)
 
     schedule_work()

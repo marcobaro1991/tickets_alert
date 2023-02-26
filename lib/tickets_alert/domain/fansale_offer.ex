@@ -1,6 +1,8 @@
 defmodule TicketsAlert.Domain.FansaleOffer do
   @moduledoc false
 
+  require Logger
+
   defstruct [
     :id,
     :initial_offer_url,
@@ -37,5 +39,8 @@ defmodule TicketsAlert.Domain.FansaleOffer do
         tickets: tickets
       }
 
-  def new(_), do: nil
+  def new(data) do
+    Logger.error("Fansale offer new error ", reason: inspect(data))
+    nil
+  end
 end

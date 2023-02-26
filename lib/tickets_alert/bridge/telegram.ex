@@ -3,6 +3,8 @@ defmodule TicketsAlert.Bridge.Telegram do
   Telegram bridge
   """
 
+  require Logger
+
   @spec send_message_to_channel(String.t()) :: :ok | :error
   def send_message_to_channel(message) do
     url = "#{base_url()}/bot#{bot_token()}/sendMessage"
@@ -24,8 +26,12 @@ defmodule TicketsAlert.Bridge.Telegram do
     url
     |> HTTPoison.post(body, headers)
     |> case do
-      {:ok, %{status_code: 200, body: _body}} -> :ok
-      _ -> :error
+      {:ok, %{status_code: 200, body: _body}} ->
+        :ok
+
+      error ->
+        Logger.error("Telegram api error", reason: inspect(error))
+        :error
     end
   end
 

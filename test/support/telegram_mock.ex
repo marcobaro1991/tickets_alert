@@ -31,15 +31,7 @@ defmodule TicketsAlert.Support.TelegramMock do
     send_resp(conn, 500, "")
   end
 
-  defp handle_response(
-         %{
-           chat_id: _chat_id,
-           disable_web_page_preview: _disable_web_page_preview,
-           parse_mode: _parse_mode,
-           text: _message
-         },
-         conn
-       ) do
+  defp handle_response(_, conn) do
     case File.read(@base <> "/send_message_response_ok.json") do
       {:ok, content} -> send_resp(conn, 200, content)
       {:error, :enoent} -> nil

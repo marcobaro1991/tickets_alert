@@ -59,7 +59,6 @@ defmodule TicketsAlert.Application.Event do
       {:ok, %EventDomain{date: event_date, enabled: enabled}} -> !is_expired?(event_date) && enabled
       _ -> false
     end
-    |> tap(&Logger.info("Event #{identifier} is still valid?: #{&1}"))
   end
 
   @spec is_expired?(Date.t()) :: boolean()
