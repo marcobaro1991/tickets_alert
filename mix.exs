@@ -98,7 +98,6 @@ defmodule TicketsAlert.MixProject do
       ],
       "ecto.clear": ["ecto.drop", "ecto.create", "ecto.migrate"],
       "ecto.setup": ["ecto.create", "ecto.migrate"],
-      "ecto.reset": ["ecto.drop", "ecto.setup"],
       s: ["local.hex --force", "ecto.clear", "phx.server"],
       test: ["local.hex --force", "ecto.clear", "run priv/repo/seeds.exs", "test"],
       "test.coverage": ["test --cover --export-coverage default", "test.coverage"],

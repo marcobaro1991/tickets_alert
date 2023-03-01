@@ -15,7 +15,7 @@ mix deps.get
 mix compile
 
 # Custom tasks (like DB migrations)
-mix ecto.setup
+mix ecto.clear
 
 # Finally run the server
 iex -S mix phx.server
