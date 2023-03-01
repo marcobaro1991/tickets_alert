@@ -28,25 +28,16 @@ config :tickets_alert, TicketsAlertWeb.Endpoint,
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
   ]
 
-# config :logger, :console, format: "$level $message\n", level: :debug
-config :logger,
-  backends: [
-    {PrimaExLogger, :prima_logger}
-  ],
-  level: :info
-
-config :logger, :prima_logger,
-  encoder: Jason,
-  type: :tickets_alert,
-  environment: :dev
-
-config :phoenix, :stacktrace_depth, 20
-
-config :phoenix, :plug_init_mode, :runtime
-
-config :tickets_alert, :jwt,
-  sign: "HS256",
-  exp_days: 7
+# config :logger,
+#  backends: [
+#    {PrimaExLogger, :prima_logger}
+#  ],
+#  level: :info
+#
+# config :logger, :prima_logger,
+#  encoder: Jason,
+#  type: :tickets_alert,
+#  environment: :dev
 
 config :http_mock_pal,
   routers: [

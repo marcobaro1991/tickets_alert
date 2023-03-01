@@ -1,7 +1,7 @@
 on: push
 
 jobs:
-  full:
+  elixir_application:
     runs-on: ubuntu-22.04
     name: OTP ${{matrix.otp}} / Elixir ${{matrix.elixir}} / Rebar ${{matrix.rebar3}}
     strategy:
@@ -33,6 +33,14 @@ jobs:
           POSTGRES_PASSWORD: postgres
         options: >-
           --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis
+        ports: ['6379:6379']
+        options: >-
+          --health-cmd "redis-cli ping"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5

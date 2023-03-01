@@ -3,13 +3,6 @@ import Config
 config :tickets_alert,
   ecto_repos: [TicketsAlert.Repo]
 
-config :tickets_alert, :telegram,
-  base_url: "http://localhost:3000",
-  bot_token: "XXX",
-  channel_id: "XXX"
-
-config :tickets_alert, :fansale, base_url: "http://localhost:3001"
-
 config :tickets_alert, TicketsAlertWeb.Endpoint,
   url: [host: "localhost"],
   http: [
@@ -20,14 +13,6 @@ config :tickets_alert, TicketsAlertWeb.Endpoint,
   render_errors: [view: TicketsAlertWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: TicketsAlert.PubSub
 
-config :elixir,
-       :time_zone_database,
-       Tz.TimeZoneDatabase
-
-config :tickets_alert, TicketsAlert.Mailer, adapter: Swoosh.Adapters.Local
-
-config :swoosh, :api_client, false
-
 config :esbuild,
   version: "0.14.29",
   default: [
@@ -36,10 +21,31 @@ config :esbuild,
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]
 
-config :logger, :console, format: "$level $message\n", level: :debug
+config :tickets_alert, :telegram,
+  base_url: {:system, "TELEGRAM_BASE_URL"},
+  bot_token: {:system, "TELEGRAM_BOT_TOKEN"},
+  channel_id: {:system, "TELEGRAM_CHANNEL_ID"}
+
+config :tickets_alert, :fansale, base_url: {:system, "FANSALE_BASE_URL"}
+
+config :elixir,
+       :time_zone_database,
+       Tz.TimeZoneDatabase
+
+config :tickets_alert, :jwt,
+  sign: "HS256",
+  exp_days: 7
+
+config :tickets_alert, :redis, connection_url: "redis://redis:6379/1"
 
 config :phoenix, :json_library, Jason
 
-# Import environment specific config. This must remain at the bottom
-# of this file so it overrides the configuration defined above.
+config :phoenix, :stacktrace_depth, 20
+
+config :phoenix, :plug_init_mode, :runtime
+
+config :joken, default_signer: "secret"
+
+config :logger, :console, format: "$level $message\n", level: :debug
+
 import_config "#{config_env()}.exs"

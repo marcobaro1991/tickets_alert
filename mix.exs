@@ -70,7 +70,6 @@ defmodule TicketsAlert.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:prima_ex_logger, "~> 0.3.0"},
       {:redix, "~> 1.1"},
-      {:swoosh, "~> 1.3"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
       {:tz, "~> 0.24.0"},

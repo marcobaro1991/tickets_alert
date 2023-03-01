@@ -12,6 +12,7 @@ defmodule TicketsAlert.Supervisor do
       dynamic_supervisor(),
       pub_sub(),
       repo(),
+      redis(),
       endpoint(),
       events_handler_process()
     ]
@@ -30,6 +31,10 @@ defmodule TicketsAlert.Supervisor do
 
   defp repo do
     TicketsAlert.Repo
+  end
+
+  defp redis do
+    TicketsAlert.Redis.Conn
   end
 
   def endpoint do
