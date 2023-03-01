@@ -1,13 +1,14 @@
-defmodule TicketsAlert.Application.Jwt do
+defmodule TicketsAlert.Application.Token do
   @moduledoc false
 
   use Timex
 
   alias TicketsAlert.Repo
   alias TicketsAlert.Schema.Token, as: TokenSchema
-  alias TicketsAlert.Schema.User, as: UserSchema
   alias TicketsAlert.Token, as: Token
   alias TicketsAlert.Redis.Redis, as: RedisClient
+  alias TicketsAlert.Domain.Token, as: TokenDomain
+  alias TicketsAlert.Domain.User, as: UserDomain
 
   @type token_config :: %{
           :sub => binary(),
@@ -20,13 +21,13 @@ defmodule TicketsAlert.Application.Jwt do
 
   @jwt_exp_days Application.compile_env!(:tickets_alert, :jwt)[:exp_days]
 
-  @spec generate_jwt(nil | UserSchema.t()) ::
+  @spec generate_jwt(nil | UserDomain.t()) ::
           %{token: String.t(), identifier: binary()} | %{error: atom()}
   def generate_jwt(_user = nil) do
     %{error: :wrong_credential}
   end
 
-  def generate_jwt(_user = %{identifier: user_identifier}) do
+  def generate_jwt(_user = %UserDomain{identifier: user_identifier}) do
     with now <- DateTime.utc_now(),
          jti <- UUID.string_to_binary!(UUID.uuid4()),
          exp <- DateTime.add(now, 60 * 60 * 24 * @jwt_exp_days, :second),
@@ -82,10 +83,11 @@ defmodule TicketsAlert.Application.Jwt do
     end
   end
 
-  @spec get_by_value(String.t()) :: TokenSchema.t() | nil
+  @spec get_by_value(String.t()) :: TokenDomain.t() | nil
   def get_by_value(token) do
     TokenSchema
     |> TokenSchema.get_by_value(token)
     |> Repo.one()
+    |> TokenDomain.new()
   end
 end

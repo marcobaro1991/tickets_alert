@@ -5,10 +5,10 @@ defmodule TicketsAlert.Application.User do
 
   alias TicketsAlert.Repo
 
-  alias TicketsAlert.Application.Jwt, as: JwtApplication
+  alias TicketsAlert.Application.Token, as: TokenApplication
   alias TicketsAlert.Domain.User, as: UserDomain
+  alias TicketsAlert.Domain.Token, as: TokenDomain
   alias TicketsAlert.Schema.User, as: UserSchema
-  alias TicketsAlert.Schema.Token, as: TokenSchema
 
   require Logger
 
@@ -18,15 +18,16 @@ defmodule TicketsAlert.Application.User do
     UserSchema
     |> UserSchema.get_by_email_and_password(email, encode_password(password), :active)
     |> Repo.one()
-    |> JwtApplication.generate_jwt()
+    |> UserDomain.new()
+    |> TokenApplication.generate_jwt()
   end
 
   @spec logout(String.t()) :: %{message: String.t()} | %{error: atom()}
   def logout(token) do
     token
-    |> JwtApplication.get_by_value()
+    |> TokenApplication.get_by_value()
     |> case do
-      %TokenSchema{} -> JwtApplication.set_to_blacklist(token)
+      %TokenDomain{} -> TokenApplication.set_to_blacklist(token)
       _ -> %{error: :token_not_stored}
     end
   end

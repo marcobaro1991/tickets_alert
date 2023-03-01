@@ -4,8 +4,9 @@ defmodule TicketsAlert.Graphql.Plug.Context do
   """
 
   alias TicketsAlert.Domain.User, as: UserDomain
+  alias TicketsAlert.Domain.Token, as: TokenDomain
   alias TicketsAlert.Application.User, as: UserApplication
-  alias TicketsAlert.Application.Jwt, as: JwtApplication
+  alias TicketsAlert.Application.Token, as: TokenApplication
   alias TicketsAlert.Graphql.Plug.Helper
   alias TicketsAlert.Token, as: Token
 
@@ -28,22 +29,27 @@ defmodule TicketsAlert.Graphql.Plug.Context do
     Absinthe.Plug.put_options(conn, context: context)
   end
 
+  @spec get_authorization_token(any()) :: String.t() | nil
   defp get_authorization_token(conn) do
-    with "Bearer " <> token <- Helper.get_header(conn, "authorization") do
-      token
+    conn
+    |> Helper.get_header("authorization")
+    |> case do
+      "Bearer " <> token -> token
+      _ -> nil
     end
   end
 
   @spec get_user_from_token(String.t() | nil) :: user_context()
-  defp get_user_from_token(nil), do: user_not_valid(nil)
+  defp get_user_from_token(nil), do: user_not_valid()
 
   defp get_user_from_token(token) do
     signer = Joken.Signer.create(@jwt_sign, "secret")
 
     with {:ok, %{"sub" => sub, "exp" => exp}} <- Token.verify_and_validate(token, signer),
          false <- exp |> DateTime.from_unix() |> Either.unwrap() |> token_is_expired?(),
+         %TokenDomain{} <- TokenApplication.get_by_value(token),
          user = %UserDomain{} <- UserApplication.get_by_identifier_and_status(sub),
-         false <- JwtApplication.is_blacklisted(token) do
+         false <- TokenApplication.is_blacklisted(token) do
       %{
         current_user: user,
         authorization_token: token
@@ -61,6 +67,10 @@ defmodule TicketsAlert.Graphql.Plug.Context do
       :lt -> false
       _ -> true
     end
+  end
+
+  defp user_not_valid do
+    user_not_valid(nil)
   end
 
   defp user_not_valid(token) do
