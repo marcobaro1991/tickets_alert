@@ -22,11 +22,11 @@ config :esbuild,
   ]
 
 config :tickets_alert, :telegram,
-  base_url: {:system, "TELEGRAM_BASE_URL"},
-  bot_token: {:system, "TELEGRAM_BOT_TOKEN"},
-  channel_id: {:system, "TELEGRAM_CHANNEL_ID"}
+  base_url: "http://localhost:3000",
+  bot_token: "XXX",
+  channel_id: "XXX"
 
-config :tickets_alert, :fansale, base_url: {:system, "FANSALE_BASE_URL"}
+config :tickets_alert, :fansale, base_url: "http://localhost:3001"
 
 config :elixir,
        :time_zone_database,

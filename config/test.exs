@@ -26,11 +26,4 @@ if System.get_env("GITHUB_ACTIONS") do
     hostname: "localhost"
 
   config :tickets_alert, :redis, connection_url: "redis://localhost:6379/1"
-
-  config :tickets_alert, :telegram,
-    base_url: "http://localhost:3000",
-    bot_token: "XXX",
-    channel_id: "XXX"
-
-  config :tickets_alert, :fansale, base_url: "http://localhost:3001"
 end

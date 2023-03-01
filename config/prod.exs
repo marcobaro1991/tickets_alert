@@ -26,3 +26,10 @@ config :logger, :prima_logger,
   encoder: Jason,
   type: :tickets_alert,
   environment: :production
+
+config :tickets_alert, :telegram,
+  base_url: {:system, "PRODUCTION_TELEGRAM_BASE_URL"},
+  bot_token: {:system, "PRODUCTION_TELEGRAM_BOT_TOKEN"},
+  channel_id: {:system, "PRODUCTION_TELEGRAM_CHANNEL_ID"}
+
+config :tickets_alert, :fansale, base_url: {:system, "PRODUCTION_FANSALE_BASE_URL"}

@@ -1,10 +1,6 @@
 # Tickets Alert
 
 ## LOCAL ##
-#### copy the environment file: ####
-```
-cp .env_dev .env
-```
 #### run application: ####
 ```
 docker-compose down --volumes && docker-compose run --service-ports api bash
@@ -29,9 +25,9 @@ docker-compose down --volumes && docker-compose run --service-ports api bash
 ./script/run_dev_test_with_coverage.sh
 ```
 ## PRODUCTION ##
-#### copy and fill the environment file: ####
+#### fill the environment file with real data: ####
 ```
-cp .env_dev .env
+vim .env
 ```
 
 #### run application in production: ####
