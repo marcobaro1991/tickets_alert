@@ -42,7 +42,6 @@ defmodule TicketsAlert.Graphql.Types.User do
 
   object :login_success, is_type_of: :login_response do
     field :token, non_null(:string)
-    field :identifier, non_null(:string)
   end
 
   object :login_failure, is_type_of: :login_response do
@@ -59,7 +58,6 @@ defmodule TicketsAlert.Graphql.Types.User do
 
   enum :login_error do
     value(:already_logged_in)
-    value(:wrong_credential)
     value(:unknown)
   end
 

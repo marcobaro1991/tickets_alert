@@ -38,7 +38,7 @@ defmodule TicketsAlert.Domain.User do
         status: status
       }) do
     %__MODULE__{
-      identifier: identifier,
+      identifier: UUID.binary_to_string!(identifier),
       first_name: first_name,
       last_name: last_name,
       password: password,

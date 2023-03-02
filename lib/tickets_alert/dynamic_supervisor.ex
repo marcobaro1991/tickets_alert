@@ -18,7 +18,7 @@ defmodule TicketsAlert.DynamicSupervisor do
   def start_fansale_event_process(event = %{identifier: identifier}) do
     __MODULE__
     |> DynamicSupervisor.start_child(%{
-      id: UUID.binary_to_string!(identifier),
+      id: identifier,
       start: {FansaleEventProcess, :start_link, [event]}
     })
     |> case do

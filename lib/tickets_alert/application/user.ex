@@ -6,20 +6,26 @@ defmodule TicketsAlert.Application.User do
   alias TicketsAlert.Repo
 
   alias TicketsAlert.Application.Token, as: TokenApplication
+  alias TicketsAlert.Application.Jwt, as: JwtApplication
   alias TicketsAlert.Domain.User, as: UserDomain
   alias TicketsAlert.Domain.Token, as: TokenDomain
   alias TicketsAlert.Schema.User, as: UserSchema
+  alias TicketsAlert.Schema.Token, as: TokenSchema
 
   require Logger
 
-  @spec login(String.t(), String.t()) ::
-          %{token: String.t(), identifier: String.t()} | %{error: atom()}
+  @spec login(String.t(), String.t()) :: %{token: String.t()} | %{error: atom()}
   def login(email, password) do
     UserSchema
     |> UserSchema.get_by_email_and_password(email, encode_password(password), :active)
     |> Repo.one()
     |> UserDomain.new()
-    |> TokenApplication.generate_jwt()
+    |> JwtApplication.generate()
+    |> TokenApplication.save()
+    |> case do
+      %TokenSchema{value: value} -> %{token: value}
+      _ -> %{error: :unknown}
+    end
   end
 
   @spec logout(String.t()) :: %{message: String.t()} | %{error: atom()}
@@ -49,7 +55,7 @@ defmodule TicketsAlert.Application.User do
   end
 
   @spec encode_password(String.t()) :: String.t()
-  def encode_password(password) do
+  defp encode_password(password) do
     :md5
     |> :crypto.hash(password)
     |> Base.encode64()

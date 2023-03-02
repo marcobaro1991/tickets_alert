@@ -4,30 +4,34 @@ defmodule TicketsAlert.Domain.Token do
   alias TicketsAlert.Schema.Token, as: TokenSchema
 
   defstruct [
+    :identifier,
+    :owner,
+    :created_at,
     :value,
-    :jti,
-    :sub,
     :exp
   ]
 
   @type t :: %__MODULE__{
-          value: String.t(),
-          jti: String.t(),
-          sub: String.t(),
-          exp: Date.t()
+          identifier: String.t(),
+          owner: String.t(),
+          created_at: DateTime.t(),
+          value: DateTime.t(),
+          exp: DateTime.t()
         }
 
   @spec new(TokenSchema.t()) :: nil | t()
   def new(%TokenSchema{
+        identifier: identifier,
+        owner: owner,
+        created_at: created_at,
         value: value,
-        jti: jti,
-        sub: sub,
         exp: exp
       }) do
     %__MODULE__{
+      identifier: UUID.binary_to_string!(identifier),
+      owner: UUID.binary_to_string!(owner),
+      created_at: created_at,
       value: value,
-      jti: jti,
-      sub: sub,
       exp: exp
     }
   end

@@ -7,16 +7,16 @@ defmodule TicketsAlert.Schema.Token do
 
   import Ecto.Query
 
-  @required_fields [:value, :jti, :sub, :created_at, :exp]
+  @required_fields [:identifier, :owner, :value, :created_at, :exp]
 
   @type t() :: %__MODULE__{}
 
   schema "tokens" do
+    field :identifier, :string
+    field :owner, :string
     field :value, :string
-    field :jti, :string
-    field :sub, :string
-    field :created_at, :utc_datetime_usec
-    field :exp, :utc_datetime_usec
+    field :created_at, :utc_datetime
+    field :exp, :utc_datetime
   end
 
   def changeset(token, data) do

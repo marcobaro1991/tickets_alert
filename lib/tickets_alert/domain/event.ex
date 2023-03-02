@@ -21,7 +21,7 @@ defmodule TicketsAlert.Domain.Event do
 
   @type t :: %__MODULE__{
           id: integer(),
-          identifier: binary(),
+          identifier: String.t(),
           external_identifier: String.t(),
           title: String.t(),
           date: Date.t(),
@@ -43,7 +43,7 @@ defmodule TicketsAlert.Domain.Event do
       }),
       do: %__MODULE__{
         id: id,
-        identifier: identifier,
+        identifier: UUID.binary_to_string!(identifier),
         external_identifier: external_identifier,
         title: title,
         date: date,

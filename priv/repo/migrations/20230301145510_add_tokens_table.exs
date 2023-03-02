@@ -3,11 +3,11 @@ defmodule TicketsAlert.Repo.Migrations.AddTokensTable do
 
   def up do
     create table(:tokens) do
+      add(:identifier, :uuid, null: false)
+      add(:owner, :uuid, null: false)
       add(:value, :text, null: false)
-      add(:jti, :uuid, null: false)
-      add(:sub, :uuid, null: false)
-      add(:created_at, :utc_datetime_usec, null: false)
-      add(:exp, :utc_datetime_usec, null: false)
+      add(:created_at, :utc_datetime, null: false)
+      add(:exp, :utc_datetime, null: false)
     end
   end
 

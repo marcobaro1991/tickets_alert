@@ -27,7 +27,7 @@ defmodule TicketsAlert.Domain.Offer do
         event_id: event_id
       }) do
     %__MODULE__{
-      identifier: identifier,
+      identifier: UUID.binary_to_string!(identifier),
       external_identifier: external_identifier,
       data: data,
       event_id: event_id
