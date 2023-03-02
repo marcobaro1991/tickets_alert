@@ -12,7 +12,7 @@ defmodule TicketsAlert.Process.FansaleEvent do
   @run_every_in_minutes 1
 
   def start_link(event = %{identifier: event_identifier}) do
-    GenServer.start_link(__MODULE__, event, name: event_identifier |> UUID.binary_to_string!() |> String.to_atom())
+    GenServer.start_link(__MODULE__, event, name: String.to_atom(event_identifier))
   end
 
   @impl true
