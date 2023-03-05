@@ -10,6 +10,7 @@ defmodule TicketsAlert.Application.EventTest do
   @fansale_disabled_event_identifier "f92691fe-18ff-4a41-b4c3-a1d453433ec5"
   @fansale_not_valid_event_identifier "10577cdd-54d3-44a2-a412-c7bd1e6a2bf9"
   @fansale_valid_event_identifier "96c547c4-fd6c-4a94-a009-1e28c4901b14"
+  @fansale_expired_today_event_identifier "b02c2941-c952-416a-a74b-191afa2f8ced"
 
   test "Fetch all valid offers success" do
     events = EventApplication.get_all_valid()
@@ -29,6 +30,10 @@ defmodule TicketsAlert.Application.EventTest do
 
   test "check if event that is expired is still valid" do
     assert EventApplication.still_valid?(@fansale_expired_event_identifier) == false
+  end
+
+  test "check if event that is expiring today is still valid" do
+    assert EventApplication.still_valid?(@fansale_expired_today_event_identifier) == false
   end
 
   test "check if event that is disabled is still valid" do

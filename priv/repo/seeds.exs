@@ -13,6 +13,14 @@ events = [
     enabled: true
   },
   %{
+    identifier: "b02c2941-c952-416a-a74b-191afa2f8ced" |> UUID.string_to_binary!(),
+    external_identifier: "fansale-expired-today-event",
+    title: "fansale event expired today",
+    date: DateTime.utc_now() |> DateTime.to_date(),
+    provider: :fansale,
+    enabled: true
+  },
+  %{
     identifier: "f92691fe-18ff-4a41-b4c3-a1d453433ec5" |> UUID.string_to_binary!(),
     external_identifier: "fansale-event-disabled",
     title: "fansale event disabled",
