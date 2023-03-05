@@ -35,9 +35,9 @@ defmodule TicketsAlert.Schema.User do
       limit: 1
   end
 
-  def get_by_identifier_and_status(query \\ __MODULE__, identifier, status) do
+  def get_active_by_identifier(query \\ __MODULE__, identifier) do
     from u in query,
-      where: u.identifier == ^identifier and u.status == ^status,
+      where: u.identifier == ^identifier and u.status == :active,
       limit: 1
   end
 

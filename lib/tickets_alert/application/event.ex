@@ -15,23 +15,13 @@ defmodule TicketsAlert.Application.Event do
     |> Repo.all()
     |> Repo.preload(:offers)
     |> Enum.map(&EventDomain.new(&1))
+    |> Enum.reject(&is_nil(&1))
   end
 
-  @spec get_all_fansale_valid :: [EventDomain.t()]
-  def get_all_fansale_valid do
-    current_date = DateTime.to_date(DateTime.utc_now())
-
-    EventSchema
-    |> EventSchema.get_all_fansale_valid(current_date)
-    |> Repo.all()
-    |> Repo.preload(:offers)
-    |> Enum.map(&EventDomain.new(&1))
-  end
-
-  @spec get_by_identifier(String.t() | binary()) :: {:ok, EventDomain.t()} | {:error, :not_found}
+  @spec get_by_identifier(String.t()) :: {:ok, EventDomain.t()} | {:error, :not_found}
   def get_by_identifier(identifier) do
     EventSchema
-    |> EventSchema.get_by_identifier(fix_identifier_format(identifier))
+    |> EventSchema.get_by_identifier(UUID.string_to_binary!(identifier))
     |> Repo.one()
     |> Repo.preload(:offers)
     |> EventDomain.new()
@@ -41,17 +31,7 @@ defmodule TicketsAlert.Application.Event do
     end
   end
 
-  @spec fix_identifier_format(String.t() | binary()) :: binary()
-  defp fix_identifier_format(identifier) do
-    identifier
-    |> String.valid?()
-    |> case do
-      true -> UUID.string_to_binary!(identifier)
-      _ -> identifier
-    end
-  end
-
-  @spec still_valid?(String.t() | binary()) :: boolean()
+  @spec still_valid?(String.t()) :: boolean()
   def still_valid?(identifier) do
     identifier
     |> get_by_identifier()

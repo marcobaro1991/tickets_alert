@@ -30,10 +30,11 @@ defmodule TicketsAlert.Application.User do
 
   @spec logout(String.t()) :: %{message: String.t()} | %{error: atom()}
   def logout(token) do
-    token
-    |> TokenApplication.get_by_value()
-    |> case do
-      %TokenDomain{} -> TokenApplication.set_to_blacklist(token)
+    with %TokenDomain{exp: exp} <- TokenApplication.get_by_value(token),
+         false <- TokenApplication.is_expired?(exp),
+         false <- TokenApplication.is_blacklisted?(token) do
+      TokenApplication.set_to_blacklist(token)
+    else
       _ -> %{error: :token_not_stored}
     end
   end
@@ -46,10 +47,10 @@ defmodule TicketsAlert.Application.User do
     |> UserDomain.new()
   end
 
-  @spec get_by_identifier_and_status(String.t(), atom()) :: UserDomain.t() | nil
-  def get_by_identifier_and_status(identifier, status \\ :active) do
+  @spec get_active_by_identifier(String.t()) :: UserDomain.t() | nil
+  def get_active_by_identifier(identifier) do
     UserSchema
-    |> UserSchema.get_by_identifier_and_status(UUID.string_to_binary!(identifier), status)
+    |> UserSchema.get_active_by_identifier(UUID.string_to_binary!(identifier))
     |> Repo.one()
     |> UserDomain.new()
   end

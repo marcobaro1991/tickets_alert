@@ -39,11 +39,6 @@ defmodule TicketsAlert.Schema.Event do
       where: e.date > ^current_date and e.enabled == true
   end
 
-  def get_all_fansale_valid(query, current_date) do
-    from e in query,
-      where: e.date > ^current_date and e.enabled == true and e.provider == :fansale
-  end
-
   def update_changeset(schema, attrs \\ %{}) do
     schema
     |> cast(attrs, @required_fields ++ @optional_fields)

@@ -4,6 +4,7 @@ defmodule TicketsAlert.Application.EventTest do
   use TicketsAlert.ChannelCase
 
   alias TicketsAlert.Application.Event, as: EventApplication
+  alias TicketsAlert.Domain.Event, as: EventDomain
 
   @fansale_expired_event_identifier "97ea8c69-daca-4dbe-9ca1-7682410653d4"
   @fansale_disabled_event_identifier "f92691fe-18ff-4a41-b4c3-a1d453433ec5"
@@ -11,7 +12,19 @@ defmodule TicketsAlert.Application.EventTest do
   @fansale_valid_event_identifier "96c547c4-fd6c-4a94-a009-1e28c4901b14"
 
   test "Fetch all valid offers success" do
-    assert length(EventApplication.get_all_valid()) == 1
+    events = EventApplication.get_all_valid()
+
+    events_wrong_domain =
+      Enum.any?(events, fn event ->
+        case event do
+          %EventDomain{} -> false
+          _ -> true
+        end
+      end)
+
+    assert length(events) == 1
+
+    assert false == events_wrong_domain
   end
 
   test "check if event that is expired is still valid" do
@@ -28,5 +41,23 @@ defmodule TicketsAlert.Application.EventTest do
 
   test "check if event is correctly valid" do
     assert EventApplication.still_valid?(@fansale_valid_event_identifier) == true
+  end
+
+  test "verify event domain from valid event" do
+    @fansale_valid_event_identifier
+    |> EventApplication.get_by_identifier()
+    |> case do
+      {:ok, %EventDomain{}} -> assert true
+      _ -> assert false
+    end
+  end
+
+  test "verify event domain from event that does not exist" do
+    "f8370e45-8d12-4dd0-8d73-78d92fce745f"
+    |> EventApplication.get_by_identifier()
+    |> case do
+      {:ok, %EventDomain{}} -> assert false
+      _ -> assert true
+    end
   end
 end

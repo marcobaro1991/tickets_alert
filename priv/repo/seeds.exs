@@ -1,6 +1,7 @@
 alias TicketsAlert.Repo, as: Repo
 
 alias TicketsAlert.Schema.Event
+alias TicketsAlert.Schema.User
 
 events = [
   %{
@@ -37,4 +38,26 @@ events = [
   }
 ]
 
+users = [
+  %{
+    identifier: "6dd39b15-8e58-49d2-85b4-718e36af2c6b" |> UUID.string_to_binary!(),
+    first_name: "Marco",
+    last_name: "Baroni",
+    password: "+xTjvH3hKDWqpqzV4at4Hg==",
+    email: "baroni.marco.91+active@gmail.com",
+    registration_type: :default,
+    status: :active
+  },
+  %{
+    identifier: "5108058f-4b35-4ffd-8308-b2e5576693ff" |> UUID.string_to_binary!(),
+    first_name: "Marco",
+    last_name: "Baroni",
+    password: "8hcTIZZNAhowzQFASRI3tQ==",
+    email: "baroni.marco.91+not_active@gmail.com",
+    registration_type: :default,
+    status: :not_active
+  }
+]
+
 Repo.insert_all(Event, events)
+Repo.insert_all(User, users)

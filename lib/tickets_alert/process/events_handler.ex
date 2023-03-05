@@ -25,7 +25,6 @@ defmodule TicketsAlert.Process.EventsHandler do
 
   @impl true
   def handle_info(:work, _state) do
-    Logger.info("check events")
     terminate_expired_and_disabled_running_events()
     start_events()
     schedule_work()

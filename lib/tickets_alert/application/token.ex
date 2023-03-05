@@ -82,7 +82,7 @@ defmodule TicketsAlert.Application.Token do
     with {:ok, %{"sub" => owner, "exp" => exp}} <- JwtApplication.verify_and_validate(token, JwtApplication.get_signer()),
          false <- exp |> DateTime.from_unix() |> Either.unwrap() |> is_expired?(),
          %TokenDomain{} <- get_by_value(token),
-         user = %UserDomain{} <- UserApplication.get_by_identifier_and_status(owner),
+         user = %UserDomain{} <- UserApplication.get_active_by_identifier(owner),
          false <- is_blacklisted?(token) do
       user
     else
