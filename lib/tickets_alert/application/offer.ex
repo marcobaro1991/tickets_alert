@@ -17,13 +17,17 @@ defmodule TicketsAlert.Application.Offer do
     end
   end
 
-  @spec save_offer(OfferSchema.t()) :: OfferDomain.t() | nil
+  @spec save_offer(OfferSchema.t()) :: {:ok, OfferDomain.t()} | {:error, nil}
   def save_offer(offer = %OfferSchema{}) do
     offer
     |> Repo.insert()
     |> case do
       {:ok, res} -> OfferDomain.new(res)
       {_, _err} -> nil
+    end
+    |> case do
+      offer_domain = %OfferDomain{} -> {:ok, offer_domain}
+      _ -> {:error, nil}
     end
   end
 end

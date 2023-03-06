@@ -31,18 +31,22 @@ defmodule TicketsAlert.Application.Event do
     end
   end
 
-  @spec still_valid?(String.t()) :: boolean()
-  def still_valid?(identifier) do
+  @spec is_still_valid?(EventDomain.t() | String.t()) :: boolean()
+  def is_still_valid?(event = %EventDomain{enabled: enabled}) do
+    !is_expired?(event) && enabled
+  end
+
+  def is_still_valid?(identifier) do
     identifier
     |> get_by_identifier()
     |> case do
-      {:ok, %EventDomain{date: event_date, enabled: enabled}} -> !is_expired?(event_date) && enabled
+      {:ok, event} -> is_still_valid?(event)
       _ -> false
     end
   end
 
-  @spec is_expired?(Date.t()) :: boolean()
-  defp is_expired?(event_date) do
+  @spec is_expired?(EventDomain.t()) :: boolean()
+  defp is_expired?(%EventDomain{date: event_date}) do
     DateTime.utc_now()
     |> DateTime.to_date()
     |> Date.compare(event_date)

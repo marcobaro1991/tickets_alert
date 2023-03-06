@@ -20,7 +20,7 @@ defmodule TicketsAlert.Application.UserTest do
     @user_active_identifier
     |> UserApplication.get_by_identifier()
     |> case do
-      %UserDomain{status: :active} -> assert true
+      {:ok, %UserDomain{status: :active}} -> assert true
       _ -> assert false
     end
   end
@@ -29,7 +29,7 @@ defmodule TicketsAlert.Application.UserTest do
     @user_not_active_identifier
     |> UserApplication.get_by_identifier()
     |> case do
-      %UserDomain{status: :not_active} -> assert true
+      {:ok, %UserDomain{status: :not_active}} -> assert true
       _ -> assert false
     end
   end
@@ -38,7 +38,7 @@ defmodule TicketsAlert.Application.UserTest do
     @user_does_not_exist_identifier
     |> UserApplication.get_by_identifier()
     |> case do
-      nil -> assert true
+      {:error, nil} -> assert true
       _ -> assert false
     end
   end
@@ -47,7 +47,7 @@ defmodule TicketsAlert.Application.UserTest do
     @user_active_identifier
     |> UserApplication.get_active_by_identifier()
     |> case do
-      %UserDomain{} -> assert true
+      {:ok, %UserDomain{}} -> assert true
       _ -> assert false
     end
   end
@@ -56,7 +56,7 @@ defmodule TicketsAlert.Application.UserTest do
     @user_not_active_identifier
     |> UserApplication.get_active_by_identifier()
     |> case do
-      nil -> assert true
+      {:error, nil} -> assert true
       _ -> assert false
     end
   end
@@ -65,7 +65,7 @@ defmodule TicketsAlert.Application.UserTest do
     @user_does_not_exist_identifier
     |> UserApplication.get_active_by_identifier()
     |> case do
-      nil -> assert true
+      {:error, nil} -> assert true
       _ -> assert false
     end
   end
@@ -74,7 +74,7 @@ defmodule TicketsAlert.Application.UserTest do
     @user_active_email
     |> UserApplication.login(@user_active_password)
     |> case do
-      %{token: _token} -> assert true
+      {:ok, _token} -> assert true
       _ -> assert false
     end
   end
@@ -83,7 +83,7 @@ defmodule TicketsAlert.Application.UserTest do
     @user_active_email
     |> UserApplication.login("wrong-password")
     |> case do
-      %{error: _error} -> assert true
+      {:error, _} -> assert true
       _ -> assert false
     end
   end
@@ -92,7 +92,7 @@ defmodule TicketsAlert.Application.UserTest do
     @user_not_active_email
     |> UserApplication.login(@user_not_active_password)
     |> case do
-      %{error: _error} -> assert true
+      {:error, _} -> assert true
       _ -> assert false
     end
   end
@@ -101,14 +101,14 @@ defmodule TicketsAlert.Application.UserTest do
     "user-email-does-not-exist@gmail.com"
     |> UserApplication.login("password-of-user-that-does-not-exist")
     |> case do
-      %{error: _error} -> assert true
+      {:error, _error} -> assert true
       _ -> assert false
     end
   end
 
   test "logout happy path" do
-    with %{token: token} <- UserApplication.login(@user_active_email, @user_active_password),
-         %{message: _message} <- UserApplication.logout(token) do
+    with {:ok, token} <- UserApplication.login(@user_active_email, @user_active_password),
+         {:ok, message} <- UserApplication.logout(token) do
       assert true
     else
       _ -> assert false
@@ -119,15 +119,15 @@ defmodule TicketsAlert.Application.UserTest do
     "token-that-does-not-exist"
     |> UserApplication.logout()
     |> case do
-      %{error: _error} -> assert true
+      {:error, _error} -> assert true
       _ -> assert false
     end
   end
 
   test "logout error, use a token already used for logged out" do
-    with %{token: token} <- UserApplication.login(@user_active_email, @user_active_password),
-         %{message: _message} <- UserApplication.logout(token),
-         %{error: _error} <- UserApplication.logout(token) do
+    with {:ok, token} <- UserApplication.login(@user_active_email, @user_active_password),
+         {:ok, _message} <- UserApplication.logout(token),
+         {:error, _error} <- UserApplication.logout(token) do
       assert true
     else
       _ -> assert false

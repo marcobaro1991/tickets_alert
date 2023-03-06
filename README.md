@@ -66,3 +66,7 @@ GET ${key}
 ```
 TTL ${key}
 ```
+
+```
+FLUSHDB
+```

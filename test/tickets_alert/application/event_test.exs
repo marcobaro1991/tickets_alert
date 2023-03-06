@@ -29,23 +29,23 @@ defmodule TicketsAlert.Application.EventTest do
   end
 
   test "check if event that is expired is still valid" do
-    assert EventApplication.still_valid?(@fansale_expired_event_identifier) == false
+    assert EventApplication.is_still_valid?(@fansale_expired_event_identifier) == false
   end
 
   test "check if event that is expiring today is still valid" do
-    assert EventApplication.still_valid?(@fansale_expired_today_event_identifier) == false
+    assert EventApplication.is_still_valid?(@fansale_expired_today_event_identifier) == false
   end
 
   test "check if event that is disabled is still valid" do
-    assert EventApplication.still_valid?(@fansale_disabled_event_identifier) == false
+    assert EventApplication.is_still_valid?(@fansale_disabled_event_identifier) == false
   end
 
   test "check if event is correctly not valid" do
-    assert EventApplication.still_valid?(@fansale_not_valid_event_identifier) == false
+    assert EventApplication.is_still_valid?(@fansale_not_valid_event_identifier) == false
   end
 
   test "check if event is correctly valid" do
-    assert EventApplication.still_valid?(@fansale_valid_event_identifier) == true
+    assert EventApplication.is_still_valid?(@fansale_valid_event_identifier) == true
   end
 
   test "verify event domain from valid event" do

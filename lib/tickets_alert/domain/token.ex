@@ -15,7 +15,7 @@ defmodule TicketsAlert.Domain.Token do
           identifier: String.t(),
           owner: String.t(),
           created_at: DateTime.t(),
-          value: DateTime.t(),
+          value: String.t(),
           exp: DateTime.t()
         }
 

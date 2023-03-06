@@ -5,7 +5,10 @@ defmodule TicketsAlert.Graphql.Plug.Context do
 
   alias Plug.Conn
   alias TicketsAlert.Domain.User, as: UserDomain
+  alias TicketsAlert.Domain.Token, as: TokenDomain
   alias TicketsAlert.Application.Token, as: TokenApplication
+  alias TicketsAlert.Application.User, as: UserApplication
+  alias TicketsAlert.Application.Jwt, as: JwtApplication
   alias TicketsAlert.Graphql.Plug.Helper
 
   @behaviour Plug
@@ -18,7 +21,7 @@ defmodule TicketsAlert.Graphql.Plug.Context do
   def init(opts), do: opts
 
   def call(conn, _) do
-    user_context = conn |> get_authorization_token() |> get_user_context()
+    user_context = conn |> get_authorization_token() |> get_user_from_jwt()
 
     Absinthe.Plug.put_options(conn, context: user_context)
   end
@@ -33,19 +36,24 @@ defmodule TicketsAlert.Graphql.Plug.Context do
     end
   end
 
-  @spec get_user_context(String.t() | nil) :: user_context()
-  defp get_user_context(_authorization_token = nil) do
+  @spec get_user_from_jwt(String.t() | nil) :: user_context()
+  defp get_user_from_jwt(_authorization_token = nil) do
     %{current_user: nil, authorization_token: nil}
   end
 
-  defp get_user_context(_authorization_token = "") do
+  defp get_user_from_jwt(_authorization_token = "") do
     %{current_user: nil, authorization_token: nil}
   end
 
-  defp get_user_context(authorization_token) do
-    %{
-      current_user: TokenApplication.get_valid_user(authorization_token),
-      authorization_token: authorization_token
-    }
+  defp get_user_from_jwt(authorization_token) do
+    with true <- JwtApplication.is_valid_format?(authorization_token),
+         {:ok, token_domain = %TokenDomain{owner: owner}} <- TokenApplication.get_by_value(authorization_token),
+         false <- TokenApplication.is_expired?(token_domain),
+         false <- TokenApplication.is_blacklisted?(token_domain),
+         {:ok, user_domain = %UserDomain{}} <- UserApplication.get_active_by_identifier(owner) do
+      %{current_user: user_domain, authorization_token: authorization_token}
+    else
+      _ -> %{current_user: nil, authorization_token: authorization_token}
+    end
   end
 end

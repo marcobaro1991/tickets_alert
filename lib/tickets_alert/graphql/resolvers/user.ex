@@ -7,8 +7,6 @@ defmodule TicketsAlert.Graphql.Resolver.User do
 
   alias TicketsAlert.Domain.User, as: UserDomain
 
-  alias Noether.Either
-
   @spec login(map(), any()) ::
           {:ok, %{token: String.t(), identifier: String.t()} | %{error: atom()}}
   def login(_args, %Resolution{
@@ -17,16 +15,19 @@ defmodule TicketsAlert.Graphql.Resolver.User do
           authorization_token: _authorization_token
         }
       }) do
-    Either.wrap(%{error: :already_logged_in})
+    {:ok, %{error: :already_logged_in}}
   end
 
   def login(%{email: email, password: password}, _info) do
     email
     |> UserApplication.login(password)
-    |> Either.wrap()
+    |> case do
+      {:ok, token} -> {:ok, %{token: token}}
+      {:error, error} -> {:ok, %{error: error}}
+    end
   end
 
-  @spec logout(map(), any()) :: {:ok, %{message: String.t()} | %{error: atom()}}
+  @spec logout(map(), any()) :: {:ok, %{message: String.t()}} | {:ok, %{error: :token_not_stored}}
   def logout(_, %Resolution{
         context: %{
           current_user: %UserDomain{identifier: _user_identifier},
@@ -35,6 +36,9 @@ defmodule TicketsAlert.Graphql.Resolver.User do
       }) do
     authorization_token
     |> UserApplication.logout()
-    |> Either.wrap()
+    |> case do
+      {:ok, message} -> {:ok, %{message: message}}
+      {:error, :token_not_stored} -> {:ok, %{error: :token_not_stored}}
+    end
   end
 end

@@ -9,32 +9,42 @@ defmodule TicketsAlert.Application.Jwt do
   @jwt_sign Application.compile_env!(:tickets_alert, :jwt)[:sign]
   @jwt_exp_days Application.compile_env!(:tickets_alert, :jwt)[:exp_days]
 
-  @spec generate(UserDomain.t() | nil) :: JwtDomain.t() | nil
+  @spec generate(UserDomain.t() | nil) :: {:ok, JwtDomain.t()} | {:error, nil}
   def generate(_user = %UserDomain{identifier: user_identifier}) do
     now = DateTime.utc_now()
     jti = UUID.uuid4()
     exp = DateTime.add(now, 60 * 60 * 24 * @jwt_exp_days, :second)
     config = generate_token_config(user_identifier, jti, now, exp)
 
-    config
-    |> generate_and_sign()
-    |> case do
-      {:ok, token, _} -> JwtDomain.new(token, config)
-      _ -> nil
+    with {:ok, token, _} <- generate_and_sign(config),
+         jwt_domain = %JwtDomain{} <- JwtDomain.new(token, config) do
+      {:ok, jwt_domain}
+    else
+      _ -> {:error, nil}
     end
   end
 
   def generate(_user = nil) do
-    nil
+    {:error, nil}
   end
 
-  def get_signer do
-    Joken.Signer.create(@jwt_sign, "secret")
+  @spec is_valid_format?(String.t()) :: boolean()
+  def is_valid_format?(token) do
+    token
+    |> verify_and_validate(get_signer())
+    |> case do
+      {:ok, _} -> true
+      _ -> false
+    end
   end
 
   @impl true
   def token_config do
     default_claims(skip: [:iss, :aud, :jti, :nbf, :exp, :iat])
+  end
+
+  defp get_signer do
+    Joken.Signer.create(@jwt_sign, "secret")
   end
 
   @spec generate_token_config(String.t(), String.t(), DateTime.t(), DateTime.t()) :: map()

@@ -11,11 +11,12 @@ defmodule TicketsAlert.Application.FansaleEvent do
   alias TicketsAlert.Domain.Offer, as: OfferDomain
   alias TicketsAlert.Schema.Offer, as: OfferSchema
   alias TicketsAlert.Bridge.Telegram, as: TelegramBridge
+  alias Noether.Either
 
   @spec check(String.t()) :: :ok | :error
   def check(event_identifier) do
-    with true <- EventApplication.still_valid?(event_identifier),
-         {:ok, %EventDomain{title: event_title, id: event_id, external_identifier: event_external_identifier}} <- EventApplication.get_by_identifier(event_identifier),
+    with {:ok, event = %EventDomain{title: event_title, id: event_id, external_identifier: event_external_identifier}} <- EventApplication.get_by_identifier(event_identifier),
+         true <- EventApplication.is_still_valid?(event),
          {:ok, fansale_offers} <- FansaleBridge.get_offers(event_external_identifier),
          new_fansale_offers <- reject_already_stored_offer(fansale_offers, event_id),
          new_stored_offers <- save_offers(new_fansale_offers, event_id) do
@@ -37,13 +38,14 @@ defmodule TicketsAlert.Application.FansaleEvent do
     end)
   end
 
-  @spec save_offers([FansaleOfferDomain.t()], integer()) :: list()
+  @spec save_offers([FansaleOfferDomain.t()], integer()) :: [OfferDomain.t()]
   defp save_offers(new_fansale_offers, event_id) do
     new_fansale_offers
     |> Enum.map(fn fansale_offer = %FansaleOfferDomain{} ->
       fansale_offer
       |> from_fansale_domain_to_offer_schema(event_id)
       |> OfferApplication.save_offer()
+      |> Either.unwrap()
     end)
     |> Enum.reject(&is_nil(&1))
   end

@@ -37,13 +37,13 @@ defmodule TicketsAlert.Process.EventsHandler do
     Enum.each(DynSupervisor.get_child_list(), fn %{pid: pid, state: event} ->
       event
       |> Map.get(:identifier)
-      |> EventApplication.still_valid?()
+      |> EventApplication.is_still_valid?()
       |> terminate_process(pid)
     end)
   end
 
   @spec terminate_process(boolean(), pid()) :: :ok | :error
-  defp terminate_process(_event_still_valid? = true, _pid) do
+  defp terminate_process(_event_is_still_valid? = true, _pid) do
     :ok
   end
 

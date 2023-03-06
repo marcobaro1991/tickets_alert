@@ -16,7 +16,7 @@ defmodule TicketsAlert.Redis.Redis do
     |> Either.map(&List.first/1)
   end
 
-  @spec save(String.t(), String.t(), integer) :: {:ok, String.t()} | {:error, atom()}
+  @spec save(String.t(), String.t(), integer()) :: {:ok, String.t()} | {:error, atom()}
   def save(key, value, ttl) do
     key
     |> save_cmd(value, ttl)
@@ -61,7 +61,7 @@ defmodule TicketsAlert.Redis.Redis do
     end
   end
 
-  @spec save_cmd(String.t(), String.t(), integer) :: Redix.command()
+  @spec save_cmd(String.t(), String.t(), integer()) :: Redix.command()
   def save_cmd(key, value, ttl), do: ["SETEX", key, ttl, value]
 
   @spec exists_cmd(String.t()) :: Redix.command()
