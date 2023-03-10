@@ -1,0 +1,623 @@
+{
+  "offers": [
+    {
+      "initialBuyUrl": "/fansale/buy/confirm.htm?offerId=6810139&tickets=3432570",
+      "initialOfferUrl": "/fansale/pinguini-tattici-nucleari-tickets-6810139.htm?ptc=1",
+      "offerUrl": "/pinguini-tattici-nucleari-tickets-6810139.htm",
+      "externalEventId": "1102324",
+      "cleanedEventName": "Pinguini Tattici Nucleari",
+      "seatDescription": "Posti a sedere o posti in piedi a seconda della disponibilità ",
+      "currentAmount": 1,
+      "promoterId": 11362,
+      "id": 6810139,
+      "minPurchasablePriceWithBuyerCommission": 41.62,
+      "minPurchasablePriceWithoutBuyerCommission": 39.0,
+      "currentPrice": 39.0,
+      "fixPrice": true,
+      "certified": true,
+      "fairDeal": true,
+      "ticketBlockRowSeatGroups": [
+        {
+          "ticketIds": [
+            3432570
+          ],
+          "tribune": null,
+          "block": "INGRESSO 5",
+          "row": "",
+          "seat": "",
+          "seatInfo": "",
+          "ga": true
+        }
+      ],
+      "allSplittingPossibilities": [
+        1
+      ],
+      "tickets": [
+        {
+          "id": 3432570,
+          "price": null,
+          "stand": null,
+          "block": "INGRESSO 5",
+          "locationInfo": "3 Anello Verde NN",
+          "row": "",
+          "seat": "",
+          "discountText": "Intero",
+          "seatInfo": "",
+          "fairDeal": true,
+          "externalSeatId": -2013257131,
+          "priceForTicket": 39.0,
+          "sold": false
+        }
+      ],
+      "unsoldTickets": null,
+      "unsoldTicketIds": null,
+      "allSplittingPossibilitiesOfferUrls": [
+        "/fansale/pinguini-tattici-nucleari-tickets-6810139.htm?ptc=1"
+      ],
+      "allSplittingPossibilitiesWithPrice": [
+        {
+          "splittingPossibility": 1,
+          "price": 41.62
+        }
+      ],
+      "splittingType": "NONE",
+      "evdetailsSeatDescriptionTooltipHtml": "INGRESSO 5 | Posto Unico",
+      "evdetailsSeatDescriptionHtml": "INGRESSO 5 | Posto Unico",
+      "evdetailsSeatDescriptionHtmlDesktop": "INGRESSO 5 | Posto Unico",
+      "evdetailsSeatDescriptionHtmlTablet": "INGRESSO 5 | Posto Unico",
+      "evdetailsSeatDescriptionHtmlMobile": "INGRESSO 5 | Posto Unico",
+      "evdetailsSplittingTypeTooltipHtml": "L'offerta può essere acquistato solo al numero di biglietti visualizzato.",
+      "evdetailsListElementHtml": null,
+      "seatCategory": "OPEN"
+    },
+    {
+      "initialBuyUrl": "/fansale/buy/confirm.htm?offerId=6808264&tickets=3429574",
+      "initialOfferUrl": "/fansale/pinguini-tattici-nucleari-tickets-6808264.htm?ptc=1",
+      "offerUrl": "/pinguini-tattici-nucleari-tickets-6808264.htm",
+      "externalEventId": "1102324",
+      "cleanedEventName": "Pinguini Tattici Nucleari",
+      "seatDescription": "INGRESSO 9 10 20 ",
+      "currentAmount": 1,
+      "promoterId": 11362,
+      "id": 6808264,
+      "minPurchasablePriceWithBuyerCommission": 51.22,
+      "minPurchasablePriceWithoutBuyerCommission": 48.0,
+      "currentPrice": 48.0,
+      "fixPrice": true,
+      "certified": true,
+      "fairDeal": true,
+      "ticketBlockRowSeatGroups": [
+        {
+          "ticketIds": [
+            3429574
+          ],
+          "tribune": null,
+          "block": "INGRESSO 9",
+          "row": "10",
+          "seat": "20",
+          "seatInfo": "3 Anello Rosso 319",
+          "ga": false
+        }
+      ],
+      "allSplittingPossibilities": [
+        1
+      ],
+      "tickets": [
+        {
+          "id": 3429574,
+          "price": null,
+          "stand": null,
+          "block": "INGRESSO 9",
+          "locationInfo": "3 Anello Rosso 319",
+          "row": "10",
+          "seat": "20",
+          "discountText": "Intero",
+          "seatInfo": "3 Anello Rosso 319",
+          "fairDeal": true,
+          "externalSeatId": 442765,
+          "priceForTicket": 48.0,
+          "sold": false
+        }
+      ],
+      "unsoldTickets": null,
+      "unsoldTicketIds": null,
+      "allSplittingPossibilitiesOfferUrls": [
+        "/fansale/pinguini-tattici-nucleari-tickets-6808264.htm?ptc=1"
+      ],
+      "allSplittingPossibilitiesWithPrice": [
+        {
+          "splittingPossibility": 1,
+          "price": 51.22
+        }
+      ],
+      "splittingType": "NONE",
+      "evdetailsSeatDescriptionTooltipHtml": "INGRESSO 9 | Fila 10 | Posto 20 | 3 Anello Rosso 319",
+      "evdetailsSeatDescriptionHtml": "INGRESSO 9 | Fila 10 | Posto 20 | 3 Anello Rosso 319",
+      "evdetailsSeatDescriptionHtmlDesktop": "INGRESSO 9 | Fila 10 | Posto 20 | 3 Anello Rosso 319",
+      "evdetailsSeatDescriptionHtmlTablet": "INGRESSO 9 | Fila 10 | Posto 20 | 3 Anello Rosso 319",
+      "evdetailsSeatDescriptionHtmlMobile": "INGRESSO 9 | Fila 10 | Posto 20 | 3 Anello Rosso 319",
+      "evdetailsSplittingTypeTooltipHtml": "L'offerta può essere acquistato solo al numero di biglietti visualizzato.",
+      "evdetailsListElementHtml": null,
+      "seatCategory": "RESERVED"
+    },
+    {
+      "initialBuyUrl": "/fansale/buy/confirm.htm?offerId=6813785&tickets=3438566",
+      "initialOfferUrl": "/fansale/pinguini-tattici-nucleari-tickets-6813785.htm?ptc=1",
+      "offerUrl": "/pinguini-tattici-nucleari-tickets-6813785.htm",
+      "externalEventId": "1102324",
+      "cleanedEventName": "Pinguini Tattici Nucleari",
+      "seatDescription": "INGRESSO 9 5 26 ",
+      "currentAmount": 1,
+      "promoterId": 11362,
+      "id": 6813785,
+      "minPurchasablePriceWithBuyerCommission": 51.22,
+      "minPurchasablePriceWithoutBuyerCommission": 48.0,
+      "currentPrice": 48.0,
+      "fixPrice": true,
+      "certified": true,
+      "fairDeal": true,
+      "ticketBlockRowSeatGroups": [
+        {
+          "ticketIds": [
+            3438566
+          ],
+          "tribune": null,
+          "block": "INGRESSO 9",
+          "row": "5",
+          "seat": "26",
+          "seatInfo": "3 Anello Rosso 329",
+          "ga": false
+        }
+      ],
+      "allSplittingPossibilities": [
+        1
+      ],
+      "tickets": [
+        {
+          "id": 3438566,
+          "price": null,
+          "stand": null,
+          "block": "INGRESSO 9",
+          "locationInfo": "3 Anello Rosso 329",
+          "row": "5",
+          "seat": "26",
+          "discountText": "Intero",
+          "seatInfo": "3 Anello Rosso 329",
+          "fairDeal": true,
+          "externalSeatId": 437210,
+          "priceForTicket": 48.0,
+          "sold": false
+        }
+      ],
+      "unsoldTickets": null,
+      "unsoldTicketIds": null,
+      "allSplittingPossibilitiesOfferUrls": [
+        "/fansale/pinguini-tattici-nucleari-tickets-6813785.htm?ptc=1"
+      ],
+      "allSplittingPossibilitiesWithPrice": [
+        {
+          "splittingPossibility": 1,
+          "price": 51.22
+        }
+      ],
+      "splittingType": "NONE",
+      "evdetailsSeatDescriptionTooltipHtml": "INGRESSO 9 | Fila 5 | Posto 26 | 3 Anello Rosso 329",
+      "evdetailsSeatDescriptionHtml": "INGRESSO 9 | Fila 5 | Posto 26 | 3 Anello Rosso 329",
+      "evdetailsSeatDescriptionHtmlDesktop": "INGRESSO 9 | Fila 5 | Posto 26 | 3 Anello Rosso 329",
+      "evdetailsSeatDescriptionHtmlTablet": "INGRESSO 9 | Fila 5 | Posto 26 | 3 Anello Rosso 329",
+      "evdetailsSeatDescriptionHtmlMobile": "INGRESSO 9 | Fila 5 | Posto 26 | 3 Anello Rosso 329",
+      "evdetailsSplittingTypeTooltipHtml": "L'offerta può essere acquistato solo al numero di biglietti visualizzato.",
+      "evdetailsListElementHtml": null,
+      "seatCategory": "RESERVED"
+    },
+    {
+      "initialBuyUrl": "/fansale/buy/confirm.htm?offerId=6816155&tickets=3442438",
+      "initialOfferUrl": "/fansale/pinguini-tattici-nucleari-tickets-6816155.htm?ptc=1",
+      "offerUrl": "/pinguini-tattici-nucleari-tickets-6816155.htm",
+      "externalEventId": "1102324",
+      "cleanedEventName": "Pinguini Tattici Nucleari",
+      "seatDescription": "INGRESSO 9 9 22 ",
+      "currentAmount": 1,
+      "promoterId": 11362,
+      "id": 6816155,
+      "minPurchasablePriceWithBuyerCommission": 51.22,
+      "minPurchasablePriceWithoutBuyerCommission": 48.0,
+      "currentPrice": 48.0,
+      "fixPrice": true,
+      "certified": true,
+      "fairDeal": true,
+      "ticketBlockRowSeatGroups": [
+        {
+          "ticketIds": [
+            3442438
+          ],
+          "tribune": null,
+          "block": "INGRESSO 9",
+          "row": "9",
+          "seat": "22",
+          "seatInfo": "3 Anello Rosso 324",
+          "ga": false
+        }
+      ],
+      "allSplittingPossibilities": [
+        1
+      ],
+      "tickets": [
+        {
+          "id": 3442438,
+          "price": null,
+          "stand": null,
+          "block": "INGRESSO 9",
+          "locationInfo": "3 Anello Rosso 324",
+          "row": "9",
+          "seat": "22",
+          "discountText": "Intero",
+          "seatInfo": "3 Anello Rosso 324",
+          "fairDeal": true,
+          "externalSeatId": 447199,
+          "priceForTicket": 48.0,
+          "sold": false
+        }
+      ],
+      "unsoldTickets": null,
+      "unsoldTicketIds": null,
+      "allSplittingPossibilitiesOfferUrls": [
+        "/fansale/pinguini-tattici-nucleari-tickets-6816155.htm?ptc=1"
+      ],
+      "allSplittingPossibilitiesWithPrice": [
+        {
+          "splittingPossibility": 1,
+          "price": 51.22
+        }
+      ],
+      "splittingType": "NONE",
+      "evdetailsSeatDescriptionTooltipHtml": "INGRESSO 9 | Fila 9 | Posto 22 | 3 Anello Rosso 324",
+      "evdetailsSeatDescriptionHtml": "INGRESSO 9 | Fila 9 | Posto 22 | 3 Anello Rosso 324",
+      "evdetailsSeatDescriptionHtmlDesktop": "INGRESSO 9 | Fila 9 | Posto 22 | 3 Anello Rosso 324",
+      "evdetailsSeatDescriptionHtmlTablet": "INGRESSO 9 | Fila 9 | Posto 22 | 3 Anello Rosso 324",
+      "evdetailsSeatDescriptionHtmlMobile": "INGRESSO 9 | Fila 9 | Posto 22 | 3 Anello Rosso 324",
+      "evdetailsSplittingTypeTooltipHtml": "L'offerta può essere acquistato solo al numero di biglietti visualizzato.",
+      "evdetailsListElementHtml": null,
+      "seatCategory": "RESERVED"
+    },
+    {
+      "initialBuyUrl": "/fansale/buy/confirm.htm?offerId=6814030&tickets=3438953",
+      "initialOfferUrl": "/fansale/pinguini-tattici-nucleari-tickets-6814030.htm?ptc=1",
+      "offerUrl": "/pinguini-tattici-nucleari-tickets-6814030.htm",
+      "externalEventId": "1102324",
+      "cleanedEventName": "Pinguini Tattici Nucleari",
+      "seatDescription": "INGRESSO 3 2 25 ",
+      "currentAmount": 1,
+      "promoterId": 11362,
+      "id": 6814030,
+      "minPurchasablePriceWithBuyerCommission": 57.62,
+      "minPurchasablePriceWithoutBuyerCommission": 54.0,
+      "currentPrice": 54.0,
+      "fixPrice": true,
+      "certified": true,
+      "fairDeal": true,
+      "ticketBlockRowSeatGroups": [
+        {
+          "ticketIds": [
+            3438953
+          ],
+          "tribune": null,
+          "block": "INGRESSO 3",
+          "row": "2",
+          "seat": "25",
+          "seatInfo": "2 Anello Verde 248",
+          "ga": false
+        }
+      ],
+      "allSplittingPossibilities": [
+        1
+      ],
+      "tickets": [
+        {
+          "id": 3438953,
+          "price": null,
+          "stand": null,
+          "block": "INGRESSO 3",
+          "locationInfo": "2 Anello Verde 248",
+          "row": "2",
+          "seat": "25",
+          "discountText": "Intero",
+          "seatInfo": "2 Anello Verde 248",
+          "fairDeal": true,
+          "externalSeatId": 471964,
+          "priceForTicket": 54.0,
+          "sold": false
+        }
+      ],
+      "unsoldTickets": null,
+      "unsoldTicketIds": null,
+      "allSplittingPossibilitiesOfferUrls": [
+        "/fansale/pinguini-tattici-nucleari-tickets-6814030.htm?ptc=1"
+      ],
+      "allSplittingPossibilitiesWithPrice": [
+        {
+          "splittingPossibility": 1,
+          "price": 57.62
+        }
+      ],
+      "splittingType": "NONE",
+      "evdetailsSeatDescriptionTooltipHtml": "INGRESSO 3 | Fila 2 | Posto 25 | 2 Anello Verde 248",
+      "evdetailsSeatDescriptionHtml": "INGRESSO 3 | Fila 2 | Posto 25 | 2 Anello Verde 248",
+      "evdetailsSeatDescriptionHtmlDesktop": "INGRESSO 3 | Fila 2 | Posto 25 | 2 Anello Verde 248",
+      "evdetailsSeatDescriptionHtmlTablet": "INGRESSO 3 | Fila 2 | Posto 25 | 2 Anello Verde 248",
+      "evdetailsSeatDescriptionHtmlMobile": "INGRESSO 3 | Fila 2 | Posto 25 | 2 Anello Verde 248",
+      "evdetailsSplittingTypeTooltipHtml": "L'offerta può essere acquistato solo al numero di biglietti visualizzato.",
+      "evdetailsListElementHtml": null,
+      "seatCategory": "RESERVED"
+    },
+    {
+      "initialBuyUrl": "/fansale/buy/confirm.htm?offerId=6791297&tickets=3402138",
+      "initialOfferUrl": "/fansale/pinguini-tattici-nucleari-tickets-6791297.htm?ptc=1",
+      "offerUrl": "/pinguini-tattici-nucleari-tickets-6791297.htm",
+      "externalEventId": "1102324",
+      "cleanedEventName": "Pinguini Tattici Nucleari",
+      "seatDescription": "INGRESSO 3 5 3 ",
+      "currentAmount": 1,
+      "promoterId": 11362,
+      "id": 6791297,
+      "minPurchasablePriceWithBuyerCommission": 57.62,
+      "minPurchasablePriceWithoutBuyerCommission": 54.0,
+      "currentPrice": 54.0,
+      "fixPrice": true,
+      "certified": true,
+      "fairDeal": true,
+      "ticketBlockRowSeatGroups": [
+        {
+          "ticketIds": [
+            3402138
+          ],
+          "tribune": null,
+          "block": "INGRESSO 3",
+          "row": "5",
+          "seat": "3",
+          "seatInfo": "2 Anello Verde 239",
+          "ga": false
+        }
+      ],
+      "allSplittingPossibilities": [
+        1
+      ],
+      "tickets": [
+        {
+          "id": 3402138,
+          "price": null,
+          "stand": null,
+          "block": "INGRESSO 3",
+          "locationInfo": "2 Anello Verde 239",
+          "row": "5",
+          "seat": "3",
+          "discountText": "Intero",
+          "seatInfo": "2 Anello Verde 239",
+          "fairDeal": true,
+          "externalSeatId": 452027,
+          "priceForTicket": 54.0,
+          "sold": false
+        }
+      ],
+      "unsoldTickets": null,
+      "unsoldTicketIds": null,
+      "allSplittingPossibilitiesOfferUrls": [
+        "/fansale/pinguini-tattici-nucleari-tickets-6791297.htm?ptc=1"
+      ],
+      "allSplittingPossibilitiesWithPrice": [
+        {
+          "splittingPossibility": 1,
+          "price": 57.62
+        }
+      ],
+      "splittingType": "NONE",
+      "evdetailsSeatDescriptionTooltipHtml": "INGRESSO 3 | Fila 5 | Posto 3 | 2 Anello Verde 239",
+      "evdetailsSeatDescriptionHtml": "INGRESSO 3 | Fila 5 | Posto 3 | 2 Anello Verde 239",
+      "evdetailsSeatDescriptionHtmlDesktop": "INGRESSO 3 | Fila 5 | Posto 3 | 2 Anello Verde 239",
+      "evdetailsSeatDescriptionHtmlTablet": "INGRESSO 3 | Fila 5 | Posto 3 | 2 Anello Verde 239",
+      "evdetailsSeatDescriptionHtmlMobile": "INGRESSO 3 | Fila 5 | Posto 3 | 2 Anello Verde 239",
+      "evdetailsSplittingTypeTooltipHtml": "L'offerta può essere acquistato solo al numero di biglietti visualizzato.",
+      "evdetailsListElementHtml": null,
+      "seatCategory": "RESERVED"
+    },
+    {
+      "initialBuyUrl": "/fansale/buy/confirm.htm?offerId=6812102&tickets=3435823",
+      "initialOfferUrl": "/fansale/pinguini-tattici-nucleari-tickets-6812102.htm?ptc=1",
+      "offerUrl": "/pinguini-tattici-nucleari-tickets-6812102.htm",
+      "externalEventId": "1102324",
+      "cleanedEventName": "Pinguini Tattici Nucleari",
+      "seatDescription": "INGRESSO 7 10 9 INGRESSO 7 10 10 INGRESSO 7 10 11 ",
+      "currentAmount": 1,
+      "promoterId": 11362,
+      "id": 6812102,
+      "minPurchasablePriceWithBuyerCommission": 73.63,
+      "minPurchasablePriceWithoutBuyerCommission": 69.0,
+      "currentPrice": 69.0,
+      "fixPrice": true,
+      "certified": true,
+      "fairDeal": true,
+      "ticketBlockRowSeatGroups": [
+        {
+          "ticketIds": [
+            3435823
+          ],
+          "tribune": null,
+          "block": "INGRESSO 7",
+          "row": "10",
+          "seat": "11",
+          "seatInfo": "2 Anello Rosso 221",
+          "ga": false
+        }
+      ],
+      "allSplittingPossibilities": [
+        1
+      ],
+      "tickets": [
+        {
+          "id": 3435821,
+          "price": 69.0,
+          "stand": null,
+          "block": "INGRESSO 7",
+          "locationInfo": "2 Anello Rosso 221",
+          "row": "10",
+          "seat": "9",
+          "discountText": "Intero",
+          "seatInfo": "2 Anello Rosso 221",
+          "fairDeal": true,
+          "externalSeatId": 149512,
+          "priceForTicket": 69.0,
+          "sold": true
+        },
+        {
+          "id": 3435822,
+          "price": 69.0,
+          "stand": null,
+          "block": "INGRESSO 7",
+          "locationInfo": "2 Anello Rosso 221",
+          "row": "10",
+          "seat": "10",
+          "discountText": "Intero",
+          "seatInfo": "2 Anello Rosso 221",
+          "fairDeal": true,
+          "externalSeatId": 149513,
+          "priceForTicket": 69.0,
+          "sold": true
+        },
+        {
+          "id": 3435823,
+          "price": 69.0,
+          "stand": null,
+          "block": "INGRESSO 7",
+          "locationInfo": "2 Anello Rosso 221",
+          "row": "10",
+          "seat": "11",
+          "discountText": "Intero",
+          "seatInfo": "2 Anello Rosso 221",
+          "fairDeal": true,
+          "externalSeatId": 149514,
+          "priceForTicket": 69.0,
+          "sold": false
+        }
+      ],
+      "unsoldTickets": null,
+      "unsoldTicketIds": null,
+      "allSplittingPossibilitiesOfferUrls": [
+        "/fansale/pinguini-tattici-nucleari-tickets-6812102.htm?ptc=1"
+      ],
+      "allSplittingPossibilitiesWithPrice": [
+        {
+          "splittingPossibility": 1,
+          "price": 73.63
+        }
+      ],
+      "splittingType": "SINGLE",
+      "evdetailsSeatDescriptionTooltipHtml": "INGRESSO 7 | Fila 10 | Posto 11 | 2 Anello Rosso 221",
+      "evdetailsSeatDescriptionHtml": "INGRESSO 7 | Fila 10 | Posto 11 | 2 Anello Rosso 221",
+      "evdetailsSeatDescriptionHtmlDesktop": "INGRESSO 7 | Fila 10 | Posto 11 | 2 Anello Rosso 221",
+      "evdetailsSeatDescriptionHtmlTablet": "INGRESSO 7 | Fila 10 | Posto 11 | 2 Anello Rosso 221",
+      "evdetailsSeatDescriptionHtmlMobile": "INGRESSO 7 | Fila 10 | Posto 11 | 2 Anello Rosso 221",
+      "evdetailsSplittingTypeTooltipHtml": "L'offerta può essere acquistata con un numero individuale di biglietti.",
+      "evdetailsListElementHtml": null,
+      "seatCategory": "RESERVED"
+    },
+    {
+      "initialBuyUrl": "/fansale/buy/confirm.htm?offerId=6819237&tickets=3447505&tickets=3447506",
+      "initialOfferUrl": "/fansale/pinguini-tattici-nucleari-tickets-6819237.htm?ptc=2",
+      "offerUrl": "/pinguini-tattici-nucleari-tickets-6819237.htm",
+      "externalEventId": "1102324",
+      "cleanedEventName": "Pinguini Tattici Nucleari",
+      "seatDescription": "Posti a sedere o posti in piedi a seconda della disponibilità Posti a sedere o posti in piedi a seconda della disponibilità ",
+      "currentAmount": 2,
+      "promoterId": 11362,
+      "id": 6819237,
+      "minPurchasablePriceWithBuyerCommission": 41.62,
+      "minPurchasablePriceWithoutBuyerCommission": 39.0,
+      "currentPrice": 78.0,
+      "fixPrice": true,
+      "certified": true,
+      "fairDeal": true,
+      "ticketBlockRowSeatGroups": [
+        {
+          "ticketIds": [
+            3447505,
+            3447506
+          ],
+          "tribune": null,
+          "block": "INGRESSO 13",
+          "row": "",
+          "seat": "",
+          "seatInfo": "",
+          "ga": true
+        }
+      ],
+      "allSplittingPossibilities": [
+        1,
+        2
+      ],
+      "tickets": [
+        {
+          "id": 3447505,
+          "price": 39.0,
+          "stand": null,
+          "block": "INGRESSO 13",
+          "locationInfo": "3 Anello Blu NN",
+          "row": "",
+          "seat": "",
+          "discountText": "Intero",
+          "seatInfo": "",
+          "fairDeal": true,
+          "externalSeatId": -2013257119,
+          "priceForTicket": 39.0,
+          "sold": false
+        },
+        {
+          "id": 3447506,
+          "price": 39.0,
+          "stand": null,
+          "block": "INGRESSO 13",
+          "locationInfo": "3 Anello Blu NN",
+          "row": "",
+          "seat": "",
+          "discountText": "Intero",
+          "seatInfo": "",
+          "fairDeal": true,
+          "externalSeatId": -2013257119,
+          "priceForTicket": 39.0,
+          "sold": false
+        }
+      ],
+      "unsoldTickets": null,
+      "unsoldTicketIds": null,
+      "allSplittingPossibilitiesOfferUrls": [
+        "/fansale/pinguini-tattici-nucleari-tickets-6819237.htm?ptc=1",
+        "/fansale/pinguini-tattici-nucleari-tickets-6819237.htm?ptc=2"
+      ],
+      "allSplittingPossibilitiesWithPrice": [
+        {
+          "splittingPossibility": 1,
+          "price": 41.62
+        },
+        {
+          "splittingPossibility": 2,
+          "price": 83.24
+        }
+      ],
+      "splittingType": "SINGLE",
+      "evdetailsSeatDescriptionTooltipHtml": "INGRESSO 13 | Posto Unico",
+      "evdetailsSeatDescriptionHtml": "INGRESSO 13 | Posto Unico",
+      "evdetailsSeatDescriptionHtmlDesktop": "INGRESSO 13 | Posto Unico",
+      "evdetailsSeatDescriptionHtmlTablet": "INGRESSO 13 | Posto Unico",
+      "evdetailsSeatDescriptionHtmlMobile": "INGRESSO 13 | Posto Unico",
+      "evdetailsSplittingTypeTooltipHtml": "L'offerta può essere acquistata con un numero individuale di biglietti.",
+      "evdetailsListElementHtml": null,
+      "seatCategory": "OPEN"
+    }
+  ],
+  "hiddenPreemptionOffers": [],
+  "paginationParams": {
+    "numResults": 8,
+    "maxPage": 0,
+    "firstPageToShowInPagination": 0,
+    "lastPageToShowInPagination": 0
+  }
+}

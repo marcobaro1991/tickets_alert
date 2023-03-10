@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="tz" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/tz/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/tz/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/tz/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/tz/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/tz/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/tz/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/tz/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/tz/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/tz/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/tz/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/tz/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/tz/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/tz/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/tz/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/tz/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/tz/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/tz/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/tz/priv" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="meck" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/meck/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/meck/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/meck/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/meck/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/meck/src" />
+    </SOURCES>
+  </library>
+</component>

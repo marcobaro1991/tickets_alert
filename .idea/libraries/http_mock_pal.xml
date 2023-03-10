@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="http_mock_pal" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/http_mock_pal/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/http_mock_pal/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/http_mock_pal/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/http_mock_pal/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/http_mock_pal/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/http_mock_pal/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/http_mock_pal/lib" />
+    </SOURCES>
+  </library>
+</component>

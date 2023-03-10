@@ -3,7 +3,7 @@
 ## LOCAL ##
 #### run application: ####
 ```
-docker-compose down --volumes && docker-compose run --service-ports api bash
+docker-compose down --volumes && docker-compose run --service-ports app bash
 ```
 ```
 ./script/run_dev.sh
@@ -11,7 +11,7 @@ docker-compose down --volumes && docker-compose run --service-ports api bash
 
 #### run tests: ####
 ```
-docker-compose down --volumes && docker-compose run --service-ports api bash
+docker-compose down --volumes && docker-compose run --service-ports app bash
 ```
 ```
 ./script/run_dev_test.sh
@@ -19,7 +19,7 @@ docker-compose down --volumes && docker-compose run --service-ports api bash
 
 #### run tests (with coverage): ####
 ```
-docker-compose down --volumes && docker-compose run --service-ports api bash
+docker-compose down --volumes && docker-compose run --service-ports app bash
 ```
 ```
 ./script/run_dev_test_with_coverage.sh
@@ -27,12 +27,12 @@ docker-compose down --volumes && docker-compose run --service-ports api bash
 ## PRODUCTION ##
 #### fill the environment file with real data: ####
 ```
-vim .env
+vim ./app/.env
 ```
 
 #### run application in production: ####
 ```
-docker-compose down && docker-compose run -d --service-ports api "run_prod"
+docker-compose down && docker-compose run -d --service-ports app "run_prod"
 ```
 
 

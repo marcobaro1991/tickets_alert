@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="uuid" type="mix">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/uuid/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/uuid/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/uuid/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/uuid/lib" />
+    </SOURCES>
+  </library>
+</component>

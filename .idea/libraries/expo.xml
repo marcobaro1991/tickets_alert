@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="expo" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/expo/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/expo/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/expo/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/expo/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/expo/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/expo/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/expo/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/expo/src" />
+    </SOURCES>
+  </library>
+</component>

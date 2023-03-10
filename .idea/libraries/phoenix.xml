@@ -1,0 +1,37 @@
+<component name="libraryTable">
+  <library name="phoenix" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix/priv" />
+    </SOURCES>
+  </library>
+</component>

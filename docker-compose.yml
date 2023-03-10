@@ -1,23 +1,27 @@
 version: "3.9"
 services:
-  api:
-    build: ./
-    container_name: tickets_alert_api
+  app:
+    build: ./app
+    container_name: tickets_alert_app
     restart: "no"
     env_file:
-      - .env
+      - ./app/.env
     volumes:
-      - ./:/$PWD
+      - ./app:/$PWD
     links:
       - "db"
       - "redis"
       - "rabbit"
+      - "fansale-mock-service"
+      - "telegram-mock-service"
     environment:
       APP_NAME: tickets_alert
     ports:
       - "4000:4000"
     working_dir: $PWD
     depends_on:
+      - fansale-mock-service
+      - telegram-mock-service
       - db
       - redis
       - rabbit
@@ -109,6 +113,26 @@ services:
     depends_on:
       - elasticsearch
       - filebeat
+
+  fansale-mock-service:
+    build:
+      context: ./fansale-mock-service
+    container_name: tickets_alert_fansale_mock_service
+    restart: "no"
+    volumes:
+      - ./fansale-mock-service:/src
+    ports:
+      - "3000:3000"
+
+  telegram-mock-service:
+    build:
+      context: ./telegram-mock-service
+    container_name: tickets_alert_telegram_mock_service
+    restart: "no"
+    volumes:
+      - ./telegram-mock-service:/src
+    ports:
+      - "3001:3000"
 volumes:
   db_data:
   redis_data:

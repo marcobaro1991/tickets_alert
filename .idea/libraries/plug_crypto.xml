@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="plug_crypto" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug_crypto/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/plug_crypto/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/plug_crypto/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/plug_crypto/lib" />
+    </SOURCES>
+  </library>
+</component>

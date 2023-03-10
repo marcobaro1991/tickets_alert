@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="cowlib" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/cowlib/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/cowlib/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/cowlib/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/cowlib/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/cowlib/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/cowlib/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/cowlib/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/cowlib/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/cowlib/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/cowlib/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/cowlib/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/cowlib/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/cowlib/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/cowlib/src" />
+    </SOURCES>
+  </library>
+</component>

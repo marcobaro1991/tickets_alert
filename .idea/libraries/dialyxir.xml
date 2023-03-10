@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="dialyxir" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/dialyxir/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/dialyxir/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/dialyxir/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/dialyxir/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/dialyxir/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/dialyxir/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/dialyxir/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/dialyxir/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/dialyxir/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/dialyxir/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/dialyxir/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/dialyxir/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/dialyxir/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/dialyxir/lib" />
+    </SOURCES>
+  </library>
+</component>

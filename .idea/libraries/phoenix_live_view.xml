@@ -1,0 +1,37 @@
+<component name="libraryTable">
+  <library name="phoenix_live_view" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_live_view/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_live_view/priv" />
+    </SOURCES>
+  </library>
+</component>

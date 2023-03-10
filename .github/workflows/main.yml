@@ -6,9 +6,9 @@ jobs:
     name: OTP ${{matrix.otp}} / Elixir ${{matrix.elixir}} / Rebar ${{matrix.rebar3}}
     strategy:
       matrix:
-        otp: ['25']
-        elixir: ['1.14.2']
-        rebar3: ['3.20']
+        otp: [ '25' ]
+        elixir: [ '1.14.2' ]
+        rebar3: [ '3.20' ]
     steps:
       - uses: actions/checkout@v2
       - uses: erlef/setup-beam@v1
@@ -17,18 +17,32 @@ jobs:
           elixir-version: ${{matrix.elixir}}
           rebar3-version: ${{matrix.rebar3}}
       - run: rebar3 ct
-      - run: mix deps.get
-      - run: mix check.compile
-      - run: mix check.format
-      - run: mix check.deps.unlock
-      - run: mix check.credo
-      - run: mix check.dialyzer
-      - run: mix test
+      - name: Download deps
+        working-directory: ./app
+        run: mix deps.get
+      - name: Compile
+        working-directory: ./app
+        run: mix check.compile
+      - name: Format
+        working-directory: ./app
+        run: mix check.format
+      - name: Deps unlock
+        working-directory: ./app
+        run: mix check.deps.unlock
+      - name: Credo
+        working-directory: ./app
+        run: mix check.credo
+      - name: Dialyzer
+        working-directory: ./app
+        run: mix check.dialyzer
+      - name: Test
+        working-directory: ./app
+        run: mix test
 
     services:
       db:
         image: postgres:11
-        ports: ['5432:5432']
+        ports: [ '5432:5432' ]
         env:
           POSTGRES_PASSWORD: postgres
         options: >-
@@ -38,9 +52,21 @@ jobs:
           --health-retries 5
       redis:
         image: redis
-        ports: ['6379:6379']
+        ports: [ '6379:6379' ]
         options: >-
           --health-cmd "redis-cli ping"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+      fansale-mock-service:
+        image: marcobaro1991/fansale-mock-server
+        ports: [ '3000:3000' ]
+        options: >-
+        volumes:
+          - ./fansale-mock-service:/src
+      telegram-mock-service:
+        image: marcobaro1991/telegram-mock-server
+        ports: [ '3001:3000' ]
+        options: >-
+        volumes:
+          - ./telegram-mock-service:/src

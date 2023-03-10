@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="metrics" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/metrics/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/metrics/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/metrics/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/metrics/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/metrics/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/metrics/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/metrics/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/metrics/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/metrics/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/metrics/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/metrics/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/metrics/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/metrics/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/metrics/src" />
+    </SOURCES>
+  </library>
+</component>

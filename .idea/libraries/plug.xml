@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="plug" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/plug/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/plug/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/plug/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/plug/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/plug/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/plug/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/plug/src" />
+    </SOURCES>
+  </library>
+</component>

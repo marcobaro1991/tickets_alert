@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="ecto" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/ecto/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/ecto/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/ecto/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/ecto/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/ecto/lib" />
+    </SOURCES>
+  </library>
+</component>

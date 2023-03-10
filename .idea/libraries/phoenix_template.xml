@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="phoenix_template" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/phoenix_template/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_template/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_template/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_template/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/phoenix_template/lib" />
+    </SOURCES>
+  </library>
+</component>

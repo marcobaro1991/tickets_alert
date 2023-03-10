@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="certifi" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/certifi/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/certifi/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/certifi/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/certifi/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/certifi/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/certifi/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/certifi/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/certifi/src" />
+    </SOURCES>
+  </library>
+</component>

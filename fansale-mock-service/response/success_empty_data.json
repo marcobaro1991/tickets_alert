@@ -1,0 +1,10 @@
+{
+  "offers": [],
+  "hiddenPreemptionOffers": [],
+  "paginationParams": {
+    "numResults": 0,
+    "maxPage": 0,
+    "firstPageToShowInPagination": 0,
+    "lastPageToShowInPagination": 0
+  }
+}

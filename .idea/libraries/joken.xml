@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="joken" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/joken/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/joken/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/joken/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/joken/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/joken/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/joken/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/joken/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/joken/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/joken/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/joken/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/joken/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/joken/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/joken/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/joken/lib" />
+    </SOURCES>
+  </library>
+</component>

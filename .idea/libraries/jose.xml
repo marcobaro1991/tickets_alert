@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="jose" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/test/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/jose/ebin" />
+      <root url="file://$PROJECT_DIR$/app/_build/dev/lib/jose/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/app/deps/jose/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/jose/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/jose/lib" />
+      <root url="file://$PROJECT_DIR$/app/deps/jose/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/jose/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/jose/priv" />
+      <root url="file://$PROJECT_DIR$/app/deps/jose/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/jose/src" />
+      <root url="file://$PROJECT_DIR$/app/deps/jose/src" />
+    </SOURCES>
+  </library>
+</component>
