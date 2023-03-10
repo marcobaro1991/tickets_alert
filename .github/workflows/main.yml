@@ -61,12 +61,10 @@ jobs:
       fansale-mock-service:
         image: marcobaro1991/fansale-mock-server
         ports: [ '3000:3000' ]
-        options: >-
         volumes:
           - ./fansale-mock-service:/src
       telegram-mock-service:
         image: marcobaro1991/telegram-mock-server
         ports: [ '3001:3000' ]
-        options: >-
         volumes:
           - ./telegram-mock-service:/src
