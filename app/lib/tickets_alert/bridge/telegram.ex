@@ -30,7 +30,7 @@ defmodule TicketsAlert.Bridge.Telegram do
         :ok
 
       error ->
-        Logger.error("Telegram api error", reason: inspect(error))
+        Logger.error("Telegram api error | reason: #{inspect(error)}", reason: inspect(error))
         :error
     end
   end

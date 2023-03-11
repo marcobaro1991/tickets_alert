@@ -36,7 +36,7 @@ defmodule TicketsAlert.Bridge.Fansale do
         body
 
       error ->
-        Logger.error("Fansale api call error for group event id: #{group_event_id}", reason: inspect(error))
+        Logger.error("Fansale api call error for group event id: #{group_event_id} | reason: #{inspect(error)}", reason: inspect(error))
         ":error"
     end
     |> Jason.decode(keys: :atoms)
