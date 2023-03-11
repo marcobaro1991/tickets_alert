@@ -62,13 +62,13 @@ jobs:
         image: 'marcobaro1991/nodejs-mock'
         ports: [ '3000:3000' ]
         volumes:
-          -  ${{github.workspace}}/fansale-mock-service:/src
+          -  ${{ GITHUB_WORKSPACE }}/fansale-mock-service:/src
         options: >-
           --expose "3000"
       telegram-mock-service:
         image: 'marcobaro1991/nodejs-mock'
         ports: [ '3001:3001' ]
         volumes:
-          -  ${{github.workspace}}/telegram-mock-service:/src
+          -   ${{ GITHUB_WORKSPACE }}/telegram-mock-service:/src
         options: >-
           --expose "3001"
