@@ -115,24 +115,26 @@ services:
       - filebeat
 
   fansale-mock-service:
-    build:
-      context: ./fansale-mock-service
+    image: marcobaro1991/nodejs-mock
     container_name: tickets_alert_fansale_mock_service
     restart: "no"
     volumes:
       - ./fansale-mock-service:/src
+    expose:
+      - "3000"
     ports:
       - "3000:3000"
 
   telegram-mock-service:
-    build:
-      context: ./telegram-mock-service
+    image: marcobaro1991/nodejs-mock
     container_name: tickets_alert_telegram_mock_service
     restart: "no"
     volumes:
       - ./telegram-mock-service:/src
+    expose:
+      - "3001"
     ports:
-      - "3001:3000"
+      - "3001:3001"
 volumes:
   db_data:
   redis_data:

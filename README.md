@@ -70,3 +70,30 @@ TTL ${key}
 ```
 FLUSHDB
 ```
+
+#### docker Images: ####
+```
+docker container commit {container_id} {image_name}
+```
+
+```
+docker tag local-image:tagname new-repo:tagname
+```
+
+```
+docker push new-repo:tagname
+```
+
+
+Example:
+```
+docker container commit 699ad9c1de35 telegram-mock-server
+```
+
+```
+docker tag telegram-mock-server:latest marcobaro1991/telegram-mock-server:latest
+```
+
+```
+docker push marcobaro1991/telegram-mock-server:latest
+```

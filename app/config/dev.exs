@@ -40,7 +40,7 @@ config :tickets_alert, TicketsAlertWeb.Endpoint,
 #  environment: :dev
 
 config :tickets_alert, :telegram,
-  base_url: "http://telegram-mock-service:3000",
+  base_url: "http://telegram-mock-service:3001",
   bot_token: "XXX",
   channel_id: "XXX"
 
