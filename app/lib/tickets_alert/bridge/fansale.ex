@@ -30,7 +30,6 @@ defmodule TicketsAlert.Bridge.Fansale do
 
     url
     |> HTTPoison.get(headers, timeout: 30_000, recv_timeout: 30_000)
-    |> IO.inspect(label: "fansale response")
     |> case do
       {:ok, %{status_code: 200, body: body}} ->
         Logger.info("Fansale api call success for group event id: #{group_event_id}", reason: inspect(body))
