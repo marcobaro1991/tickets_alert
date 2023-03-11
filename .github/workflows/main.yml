@@ -69,6 +69,6 @@ jobs:
         image: 'marcobaro1991/nodejs-mock'
         ports: [ '3001:3001' ]
         volumes:
-          -   ${GITHUB_WORKSPACE}/telegram-mock-service:/src
+          -   $GITHUB_WORKSPACE/telegram-mock-service:/src
         options: >-
           --expose "3001"
