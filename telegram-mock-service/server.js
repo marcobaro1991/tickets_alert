@@ -12,7 +12,6 @@ app.get('/heart-bit', (request, response) => {
 
 app.post('/bot*/sendMessage', (request, response) => {
 
-    console.log("ciaone")
     const {chat_id, text, parse_mode} = request.body
 
     if("message with error response" === text){
