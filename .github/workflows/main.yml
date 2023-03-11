@@ -62,13 +62,13 @@ jobs:
         image: 'marcobaro1991/nodejs-mock'
         ports: [ '3000:3000' ]
         volumes:
-          - fansale-mock-service:/src
+          - /home/runner/work/tickets_alert/fansale-mock-service:/src
         options: >-
           --expose "3000"
       telegram-mock-service:
         image: 'marcobaro1991/nodejs-mock'
         ports: [ '3001:3001' ]
         volumes:
-          - telegram-mock-service:/src
+          - /home/runner/work/tickets_alert/telegram-mock-service:/src
         options: >-
           --expose "3001"
