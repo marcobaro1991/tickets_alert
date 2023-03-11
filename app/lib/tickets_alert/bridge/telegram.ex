@@ -25,6 +25,7 @@ defmodule TicketsAlert.Bridge.Telegram do
 
     url
     |> HTTPoison.post(body, headers)
+    |> IO.inspect(label: "telegram response")
     |> case do
       {:ok, %{status_code: 200, body: _body}} ->
         :ok
